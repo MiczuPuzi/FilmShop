@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/MiczuPuzi/FilmShop#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.12"
   }
 }
