@@ -1,6 +1,6 @@
 const Film = require('../../database/models/film');
 
-class FilmActions {
+class filmActions {
     async getAllFilms(req, res) {
         let doc;
         try {
@@ -57,4 +57,4 @@ class FilmActions {
     }
 }
 
-module.exports = new FilmActions()
+module.exports = new filmActions()

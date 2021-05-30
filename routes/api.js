@@ -1,14 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-const FilmActions = require('../actions/api/FilmActions')
+const filmActions = require('../actions/api/filmActions')
+const opinionActions = require('../actions/api/opinionActions')
 
-
-router.get('/films', FilmActions.getAllFilms)
-router.get('/films/:id', FilmActions.getFilm)
-router.post('/films', FilmActions.saveFilm)
-router.put('/films/:id', FilmActions.updateFilm)
-router.delete('/films/:id', FilmActions.deleteFilm)
+//Filmy
+router.get('/films', filmActions.getAllFilms)
+router.get('/films/:id', filmActions.getFilm)
+router.post('/films', filmActions.saveFilm)
+router.put('/films/:id', filmActions.updateFilm)
+router.delete('/films/:id', filmActions.deleteFilm)
+//Opinie
+router.get('/opinions', opinionActions.getAllOpinions)
+router.get('/opinions/:id', opinionActions.getOpinion)
+router.post('/opinions', opinionActions.saveOpinion)
+router.put('/opinions/:id', opinionActions.updateOpinion)
+router.delete('/opinions/:id', opinionActions.deleteOpinion)
 
 
 
