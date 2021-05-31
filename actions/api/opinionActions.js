@@ -42,7 +42,7 @@ class opinionActions {
         const description = req.body.description
         const opinion = await Opinion.findOne({_id: id});
         opinion.rate = rate
-        film.description = description
+        opinion.description = description
         await opinion.save()
         res.status(200).json(opinion)
     }
