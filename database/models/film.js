@@ -12,6 +12,9 @@ const FilmSchema = new mongoose.Schema({
     directorName: {
         type: String,
         required: true
+    },
+    description:{
+        type: String,
     }
 })
 

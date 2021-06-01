@@ -27,9 +27,10 @@ class filmActions {
         const title = req.body.title
         const price = req.body.price
         const directorName = req.body.directorName
+        const description = req.body.description
         let newFilm;
         try {
-            newFilm = new Film({title, price, directorName});
+            newFilm = new Film({title, price, directorName,description});
             await newFilm.save()
         }catch (err){
             return res.status(422).json({message: err.message})
@@ -42,10 +43,12 @@ class filmActions {
         const title = req.body.title
         const price = req.body.price
         const directorName = req.body.directorName
+        const description = req.body.description
         const film = await Film.findOne({_id: id});
         film.title = title
         film.price = price
         film.directorName = directorName
+        film.description = description
         await film.save()
         res.status(200).json(film)
     }
