@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
 const opinionSchema = new mongoose.Schema({
+    filmTitle: {
+        type: String,
+        required: true
+    },
     rate: {
         type: "Number",
         required: true

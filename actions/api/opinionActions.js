@@ -24,11 +24,12 @@ class opinionActions {
 
 
     async saveOpinion(req, res) {
+        const filmTitle = req.body.filmTitle
         const rate = req.body.rate
         const description = req.body.description
         let newOpinion;
         try {
-            newOpinion = new Opinion({rate, description});
+            newOpinion = new Opinion({filmTitle,rate, description});
             await newOpinion.save()
         }catch (err){
             return res.status(422).json({message: err.message})
@@ -38,9 +39,11 @@ class opinionActions {
 
     async updateOpinion(req, res) {
         const id = req.params.id;
+        const filmTitle = req.body.filmTitle
         const rate = req.body.rate
         const description = req.body.description
         const opinion = await Opinion.findOne({_id: id});
+        opinion.filmTitle = filmTitle
         opinion.rate = rate
         opinion.description = description
         await opinion.save()
