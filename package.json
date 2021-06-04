@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/MiczuPuzi/FilmShop#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.9",
-    "mongoose": "^5.12.12"
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7"
   }
 }
