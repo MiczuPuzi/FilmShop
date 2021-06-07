@@ -3,4 +3,7 @@ module.exports = {
   database:
     process.env.DATABASE ||
     'mongodb+srv://user:user@filmshop.chnng.mongodb.net/FilmShop?retryWrites=true&w=majority',
+  secretTokenString: 'Dasd241cWD2r',
 }
+
+// secretTokenString should be secret
