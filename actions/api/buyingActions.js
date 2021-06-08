@@ -14,10 +14,10 @@ const transporter = nodemailer.createTransport({
 class buyingActions {
 
     buyFilms(req, res) {
-        const {user, films, totalPrice} = req.body
+        const {email, films, totalPrice} = req.body
         const mailOptions = {
             from: 'filmshoptest@gmail.com',
-            to: user.email,
+            to: email,
             subject: "Dokonano Zakupu",
             text: "Dziękujemy za dokonanie zakupu kupiono:\n " + films.map(film => film.title + "\n")
             + "Całkowita kwota wynosi: " + totalPrice

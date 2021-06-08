@@ -55,7 +55,7 @@ class authActions {
     }
 
     const token = jwt.sign({ _id: user._id }, secretTokenString)
-    res.header('auth-token', token).send(token)
+    res.header('auth-token', token).send({token, email: user.email})
   }
 }
 
